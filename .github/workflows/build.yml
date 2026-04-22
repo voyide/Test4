@@ -25,6 +25,9 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Create Native Platform Folders
+        run: flutter create .
+
       - name: Install Dependencies
         run: flutter pub get
 
@@ -36,4 +39,3 @@ jobs:
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
-          
